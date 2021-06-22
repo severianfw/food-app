@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        tools:context=".DetailActivity">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            style="@style/backBtnStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_food"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back_btn"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_name_detail"
+            style="@style/headerFontStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_food"
+            tools:text="Food Name" />
+
+        <TextView
+            android:id="@+id/tv_desc_detail"
+            style="@style/detailContentFontStyle"
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_detail"
+            tools:text="Description" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc_detail">
+
+            <TextView
+                android:id="@+id/tv_nationality"
+                style="@style/subHeaderFontStyle"
+                android:text="@string/nationality"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_nationality"
+                style="@style/nationalImgStyle"
+                android:contentDescription="national img"
+                app:layout_constraintEnd_toEndOf="@id/tv_nationality"
+                app:layout_constraintStart_toStartOf="@id/tv_nationality"
+                app:layout_constraintTop_toBottomOf="@id/tv_nationality"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tv_calories_header"
+                style="@style/subHeaderFontStyle"
+                android:text="@string/calories"
+                app:layout_constraintBottom_toBottomOf="@id/tv_nationality"
+                app:layout_constraintEnd_toStartOf="@id/tv_cook_time_header"
+                app:layout_constraintStart_toEndOf="@id/tv_nationality"
+                app:layout_constraintTop_toTopOf="@id/tv_nationality" />
+
+            <TextView
+                android:id="@+id/tv_calories"
+                style="@style/detailContentFontStyle"
+                app:layout_constraintEnd_toEndOf="@id/tv_calories_header"
+                app:layout_constraintStart_toStartOf="@id/tv_calories_header"
+                app:layout_constraintTop_toBottomOf="@id/tv_calories_header"
+                tools:text="200 kcal" />
+
+            <TextView
+                android:id="@+id/tv_cook_time_header"
+                style="@style/subHeaderFontStyle"
+                android:text="@string/cook_time"
+                app:layout_constraintBottom_toBottomOf="@id/tv_calories_header"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_calories_header" />
+
+            <TextView
+                android:id="@+id/tv_cook_time"
+                style="@style/detailContentFontStyle"
+                app:layout_constraintEnd_toEndOf="@id/tv_cook_time_header"
+                app:layout_constraintStart_toStartOf="@id/tv_cook_time_header"
+                app:layout_constraintTop_toBottomOf="@id/tv_cook_time_header"
+                tools:text="15mns" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

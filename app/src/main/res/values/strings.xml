@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Food Application</string>
+    <string name="nationality">Nationality</string>
+    <string name="calories">Calories</string>
+    <string name="cook_time">Cook Time</string>
+    <string name="profile_name">Severian</string>
+    <string name="profile_email">severianfathich@gmail.com</string>
+</resources>

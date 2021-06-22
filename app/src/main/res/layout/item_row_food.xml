@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/rv_item_shape"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/item_photo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="14dp"
+        tools:src="@tools:sample/avatars" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_food_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Food Name" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_food_name"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/light_grey"
+            android:textSize="12sp"
+            tools:text="Description" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
